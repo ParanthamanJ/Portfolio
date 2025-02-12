@@ -48,7 +48,7 @@ nav ul li a:hover {
     color: white;
     text-align: left;
     padding: 250px 50px;
-    background-image: url('/Images/myimg1.jpg');
+    background-image: url('myimg1.jpg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
