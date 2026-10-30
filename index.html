@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <!-- Navigation Bar -->
-     <nav class="navbar">
+    <nav class="navbar">
     <div class="logo">Paranthaman J</div>
         <ul class="nav-links">
           <span class="close-btn">&times;</span>
@@ -21,237 +21,228 @@
         </ul>
         <div class="menu-toggle">&#9776;</div>
     </nav>
-
- <!-- Home Section
- <header id="home" class="hero">
-  <h1>Hi, This is <span>Paranthaman J</span></h1>
-      <h2>Welcome to My 3D Art Portfolio</h2>
-      <p>Explore my collection of 3D renders and models</p>
-  </header> -->
     
     <!-- Home Section -->
-<header id="home" class="hero">
-   <!-- <h1>Hi, This is <span>Paranthaman J</span></h1> -->
+    <header id="home" class="hero">
     <h2>Welcome to My 3D Art Portfolio</h2>
-    <p>Explore my collection of 3D renders and models</p>
-    
-    <!-- Social Links -->
+    <p>Explore my 3D models, environments, and creative projects.</p>
+
     <div class="portfolio-links">
-        <a href="https://sketchfab.com/ramsurya" class="btn sketchfab" target="_blank">Sketchfab</a>
-        <!--<a href="https://www.cgtrader.com/designers/RamSurya" class="btn cgtrader" target="_blank">CGTrader</a> -->
-        <a href="https://www.artstation.com/ramsurya" class="btn artstation" target="_blank">ArtStation</a>
+        <a href="#projects" class="btn">View My Work</a>
+        <a href="https://sketchfab.com/ramsurya"
+           class="btn sketchfab"
+           target="_blank"
+           rel="noopener noreferrer">Sketchfab</a>
     </div>
-</header>
+    </header>
 
 
-<!-- Projects Section -->
+    <!-- Projects Section -->
     <section id="projects">
        
        <div class="container">
        <h2>My Works</h2>
 
-    <!-- Category Buttons -->
-        <div class="buttons">
-        <button class="btn" onclick="filterProjects('all')">All</button>
-        <button class="btn" onclick="filterProjects('vehicle')">Vehicles</button>
-        <button class="btn" onclick="filterProjects('environments')">Environments</button>
-        <button class="btn" onclick="filterProjects('prop')">Props</button>
-        <button class="btn" onclick="filterProjects('weapon')">Weapon</button>
-    </div>
-
     <!-- Portfolio Grid -->
+    
     <div class="grid">
-      
-    <!-- Project 3: Props-->
-      <div class="project prop" onclick="openModal('model3')">
-          <img src="busshelter.png" alt="Bus Shelter">
-          <div class="project-title">Bus Shelter</div>
+
+        <!-- Toll Plaza -->
+        <div class="project" onclick="openModal('tollPlaza')">
+        <img src="images/tollplaza.png" alt="Toll Plaza 3D Model">
+        <div class="project-title">
+            Toll Plaza <span class="project-status">In Progress</span>
+        </div>
         </div>
 
-      <!-- Project 3: Props-->
-      <div class="project prop" onclick="openModal('model3')">
-          <img src="vendingmachine.jpg" alt="Vending Machine">
-          <div class="project-title">Low-Poly Vending Machine</div>
-        </div>
-        
-       <!-- Project 6 : Environments -->
-      <div class="project environments" onclick="openModal('model6')">
-            <img src="smallisland.jpg" alt="Small Environment">
-          <div class="project-title">Low-Poly Floating Island</div>
-        </div>
-         <!-- Project 4:Weapon -->
-        <div class="project weapon" onclick="openModal('model4')">
-            <img src="sword.jpg" alt="Weapon">
-            <div class="project-title">Ancient Battle-Worn Sword</div>
-        </div>
-        
-        <!-- Project 1: Vehicle -->
-        <div class="project vehicle" onclick="openModal('model1')">
-            <img src="forklift.jpg" alt="Vehicle">
-            <div class="project-title">Forklift</div>
+        <!-- Bus Shelter -->
+        <div class="project" onclick="openModal('busShelter')">
+        <img src="images/busshelter.png" alt="Bus Shelter 3D Model">
+        <div class="project-title">Bus Shelter</div>
         </div>
 
-        <!-- Project 2: Environment -->
-        <div class="project environments" onclick="openModal('model2')">
-            <img src="lowpolyhouse.jpg" alt="Small Environment">
-            <div class="project-title">Low-Poly Island Cabin</div>
-        </div>
-        
-         <!-- Project 5: Environment -->
-        <div class="project environments" onclick="openModal('model5')">
-            <img src="couragedoghouse.jpg" alt="Small Environment">
-          <div class="project-title">Low-Poly Courage's Farmhouse</div>
+        <!-- Tea Shop -->
+        <div class="project" onclick="openModal('teaShop')">
+        <img src="images/teashop.png" alt="Tea Shop 3D Model">
+        <div class="project-title">Tea Shop</div>
         </div>
     </div>
-</div>
 
-
-<!-- Modal 3: Floating Island-->
-<div id="model3" class="modal">
+    <!-- Toll Plaza Modal -->
+    <div id="tollPlaza" class="modal" onclick="closeModalOnOutside(event, 'tollPlaza')">
     <div class="modal-content">
-        <span class="close" onclick="closeModal('model3')">&times;</span>
-        <h3>Low-Poly Vending Machine</h3>
-        <iframe src="https://sketchfab.com/models/98627b2028fb4a21891e829af110dab5/embed"></iframe>
-        <img src="vendingmachine.jpg" alt="Vending Machine">
-        <p>A simple lowpoly Vending Machine 3d model optimized for games and stylised environments.This model is lightweight, making it use for mobile and used Prisma 3D to model this machine.</p>
-    </div>
-</div>
+        <button class="close" onclick="closeModal('tollPlaza')" aria-label="Close">&times;</button>
 
-<!-- Modal 6: Floating Island-->
-<div id="model6" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeModal('model6')">&times;</span>
-        <h3>Low-Poly Floating Island</h3>
-        <iframe src="https://sketchfab.com/models/9700497248364520bd2a9e61272d6b62/embed"></iframe>
-        <img src="smallisland.jpg" alt="Small Island">
-        <p>A charming low-poly floating island featuring a cozy wooden house, lush green trees, a small wooden dock, and scattered rocks. The scene is designed in a minimalistic style, perfect for stylized games, animations, or diorama projects. Modeled with clean geometry and simple colors to maintain an optimized and visually appealing look.</p>
-    </div>
-</div>
+        <h3>Toll Plaza</h3>
 
-<!-- Modal 1: Forklift -->
-<div id="model1" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeModal('model1')">&times;</span>
-        <h3>Forklift</h3>
-        <iframe src="https://sketchfab.com/models/61d4ce4884fe4fa5bbaf1a0587385671/embed"></iframe>
-        <img src="forklift.jpg" alt="Forklift">
-        <p>A low-poly forklift designed for industrial and warehouse environments. Featuring a simple yet functional structure with lifting forks, a sturdy frame, and a compact design, this model is ideal for logistics, construction.</p>
-    </div>
-</div>
+        <img src="tollplaza.png" alt="Toll Plaza 3D Model">
 
-<!-- Modal 2: Island Cabin -->
-<div id="model2" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeModal('model2')">&times;</span>
-        <h3>Low-Poly Island Cabin</h3>
-        <iframe src="https://sketchfab.com/models/9692a9c6a68544ce8c33ea634cc98157/embed"></iframe>
-        <img src="lowpolyhouse.jpg" alt="House Render">
-        <p>A peaceful low-poly island scene featuring a cozy cabin, a wooden dock, and natural elements like rocks, grass, and water. The simple and vibrant aesthetic makes it ideal for environments or animations.</p>
-    </div>
-</div>
+        <p>
+            An Indian highway toll plaza environment featuring toll booths,
+            road barriers, and roadway elements. Currently in progress.
+        </p>
 
-<!-- Modal 3: Warrior Character -->
-<div id="model3" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeModal('model3')">&times;</span>
-        <h3>Warrior Character</h3>
-        <iframe src="https://sketchfab.com/models/YOUR-MODEL-ID-3/embed"></iframe>
-        <img src="warrior_render.jpg" alt="Warrior Render">
-        <p>A powerful warrior character with detailed armor and weapons.</p>
+        <p class="project-tools">Created with Blender</p>
     </div>
-</div>
+    </div>
+    
+    
+    <!-- Bus Shelter Modal -->
+    <div id="busShelter" class="modal" onclick="closeModalOnOutside(event, 'busShelter')">
+    <div class="modal-content">
+        <button class="close" onclick="closeModal('busShelter')" aria-label="Close">&times;</button>
 
-<!-- Model 4:Weapon -->
-<div id="model4" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeModal('model4')">&times;</span>
-        <h3>Ancient Battle-Worn Sword</h3>
-        <iframe src="https://sketchfab.com/models/8438f56d864e49f189a2e0b008717ceb/embed"></iframe>
-        <img src="sword.jpg" alt="Warrior Render">
-        <p>A low-poly battle-worn sword featuring a chipped and rugged blade, a golden crossguard, and a wooden grip. Designed for medieval or fantasy-themed games, animations, and stylized projects.</p>
-    </div>
-</div>
+        <h3>Bus Shelter</h3>
 
-<!-- Modal 4: Courage Farmhouse -->
-<div id="model5" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeModal('model5')">&times;</span>
-        <h3>Low-Poly Courage's Farmhouse</h3>
-        <iframe src="https://sketchfab.com/models/bfee149adcec44f7b9afd2e898de67df/embed"></iframe>
-        <img src="couragedoghouse.jpg" alt="House Render">
-        <p>A low-poly recreation of the iconic farmhouse and windmill from Courage the Cowardly Dog. Designed with a stylized aesthetic, this model captures the eerie yet nostalgic feel of the original cartoon.</p>
+        <iframe
+            src="https://sketchfab.com/models/5c9eccd2d72749a7b38e4be9202afb13/embed"
+            title="Bus Shelter 3D Model"
+            allow="autoplay; fullscreen; xr-spatial-tracking"
+            allowfullscreen>
+        </iframe>
+
+        <p>
+            A 3D bus shelter inspired by urban bus stops in Chennai, Tamil Nadu.
+        </p>
+
+        <p class="project-tools">Created with Blender</p>
     </div>
-</div>
+    </div>
+
+    <!-- Tea Shop Modal -->
+    <div id="teaShop" class="modal" onclick="closeModalOnOutside(event, 'teaShop')">
+    <div class="modal-content">
+        <button class="close" onclick="closeModal('teaShop')" aria-label="Close">&times;</button>
+
+        <h3>Tea Shop</h3>
+
+        <iframe
+            src="https://sketchfab.com/3d-models/low-poly-tea-shop-blender-3d-7588aa06d38242fe9c64cb1e737d51da/embed"
+            title="Tea Shop 3D Model"
+            allow="autoplay; fullscreen; xr-spatial-tracking"
+            allowfullscreen>
+        </iframe>
+
+        <p>
+            A traditional Tamil Nadu tea shop environment featuring a local tea stall design and surrounding street details.
+        </p>
+
+        <p class="project-tools">Created with Blender</p>
+    </div>
+    </div>
+
     </section>
 
     <!-- About Section -->
     <section id="about">
-      <h2>About Me</h2>
-        <div class="about-container">
-            <div class="about-img">
-                <img src="myimg.jpg" alt="Profile Image">
-            </div>
-            <div class="about-text">
-                <p>"Hey! I’m Paranthaman J, also known as Ram Surya a 3D artist interested in 3D modeling, environments, and visual design. I’m constantly improving my skills and exploring new techniques with Blender. Check out my work and feel free to connect!"</p>
-            </div>
+    <h2>About Me</h2>
+    <div class="about-container">
+        <div class="about-img">
+            <img src="images/myimg.jpg" alt="Portrait of Paranthaman J">
         </div>
-            
-        <div class="education">
-           <h3>Education</h3>
-           <div class="edu-item">
-            <h3>Bachelor of Engineering in Electronics and Communication Engineering</h3>
-            <p><strong>Anna University, Trichy</strong></p>
-            <p>2020 - 2024</p>
-           </div>
+        <div class="about-text">
+            <p>
+                Hi, I'm Paranthaman J, also known as Ram Surya.
+                I'm a 3D artist interested in 3D modeling and environment
+                modeling. I use Blender to create 3D assets and environments
+                while continuously improving my skills and exploring new
+                techniques.
+            </p>
         </div>
+    </div>
+              
+    <div class="education">
+        <h3>Education</h3>
+
+        <div class="edu-item">
+            <h4>B.E in Electronics and Communication Engineering</h4>
+            <p><strong>Anna University, Tiruchirappalli</strong></p>
+            <p>2020 – 2024</p>
+        </div>
+    </div>
+
         
-        <div class="skills-container">
-          <h3>Skills</h3>
-          <ul class="skills-list">
-            <li>Blender</li>
-            <li>3D Modeling</li>
-            <li>Graphic Design</li>
-            <li>HTML</li>
-            <li>CSS</li>
-          </ul>
-        </div>
     
-        <div class="hobbies">
-            <h3>Hobbies</h3>
-          <div class="hobbies-list">
-              <div class="hobby">
-                <i class="fa fa-headphones"></i>
-                <p>Listening Music</p>
-              </div>
-              <div class="hobby">
-               <i class="fa fa-book"></i>
-                <p>Reading</p>
-              </div>
-              <div class="hobby">
-            <i class="fa fa-gamepad"></i>
-                <p>Video Games</p>
-              </div>
+    <div class="skills-container">
+        <h3>Skills</h3>
+
+        <div class="skills-list">
+            <div class="skill">
+                <i class="fa fa-cube"></i>
+                <p>Blender</p>
             </div>
-          </div>
+
+            <div class="skill">
+                <i class="fa fa-cubes"></i>
+                <p>3D Modeling</p>
+            </div>
+
+            <div class="skill">
+                <i class="fa fa-building"></i>
+                <p>Environment Modeling</p>
+            </div>
+
+            <div class="skill">
+                <i class="fa fa-code"></i>
+                <p>HTML</p>
+            </div>
+
+            <div class="skill">
+                <i class="fa fa-code"></i>
+                <p>CSS</p>
+            </div>
         </div>
+    </div>
+
+    <div class="hobbies">
+        <h3>Interests</h3>
+        <div class="hobbies-list">
+            <div class="hobby">
+                <i class="fa fa-headphones"></i>
+                <p>Listening to Music</p>
+            </div>
+            <div class="hobby">
+                <i class="fa fa-laptop"></i>
+                <p>Exploring Technology</p>
+            </div>
+            <div class="hobby">
+                <i class="fa fa-gamepad"></i>
+                <p>Gaming</p>
+            </div>
+        </div>
+    </div>
     </section>
 
+    
     <!-- Contact Section -->
     <section id="contact">
-        <div class="container">
-            <h2>Contact</h2>
-          <h3>Let's Connect</h3>
-          <p>Interested in my work or have an opportunity you'd like to discuss? Feel free to reach out.</p>
-            <a href="https://github.com/ParanthamanJ" class="fa">GITHUB</a>
-            <a href="mailto:jparanthaman25@gmail.com" class="fa">MAIL</a>
+    <div class="container">
+        <h2>Contact</h2>
+        <h3>Let's Connect</h3>
+        <p>
+            Interested in my work or have an opportunity to discuss?
+            Feel free to reach out.
+        </p>
+
+        <div class="contact-links">
+            <a href="https://github.com/ParanthamanJ"
+               target="_blank"
+               rel="noopener noreferrer">GitHub</a>
+
+            <a href="mailto:jparanthaman25@gmail.com">Email Me</a>
         </div>
-       </section>
- 
+    </div>
+    </section>
+
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Paranthaman J</p>
+        <p>&copy; <span id="year"></span> Paranthaman J</p>
     </footer>
     
+    <button id="backToTop" aria-label="Back to top" title="Back to top">
+        &#8593;
+    </button>
+
     <script src="script.js"></script>
 </body>
 </html>
